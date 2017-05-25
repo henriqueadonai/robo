@@ -24,10 +24,10 @@ let robots = [
 //   { id: 3, name: 'Henrique Cabral', email:'henrique.cabral@gmail.com.br'}
 //   ];
 // },3000);
-
+{/*<CardList robots={robots} />*/}
 
 ReactDOM.render(
-   <CardList robots={robots} />
+   <App/>
    , document.getElementById('root')
 );
 
