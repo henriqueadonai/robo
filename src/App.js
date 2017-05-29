@@ -28,15 +28,22 @@ class App extends Component {
 
   onSearchChange(evt){
     console.log(evt.target.value);
-    this.setState({searchTerm: evt});
+    this.setState({searchTerm: evt.target.value});
   }
 
   render() {
+    const {searchTerm, robots} = this.state;
+
+    const filteredRobots = robots.filter(robot => {
+        return robot.name.toLowerCase().includes(searchTerm);
+    });    
+    
+
     return (
       <div className='tc'>
         <h1>RoboDex</h1>
         <SearchBox onSearchChange={this.onSearchChange}/>
-        <CardList robots={this.state.robots} />
+        <CardList robots={filteredRobots} />
       </div>
     );
   }
