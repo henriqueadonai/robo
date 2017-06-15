@@ -8,6 +8,10 @@ import 'tachyons';
 import { createStore } from 'redux';
 import  {searchReducer } from './reducers/reducers';
 import { Provider } from 'react-redux';
+import createLogger from 'redux-logger';
+
+//stoped on the 59:44
+//https://vimeo.com/212771057
 
 var nowDay = "good day";
   // <Hello great={nowDay} />,  
