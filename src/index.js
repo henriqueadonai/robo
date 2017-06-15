@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './containers/App';
 import './index.css';
-import Hello from './Hello';
-import CardList from './CardList';
+import Hello from './components/Hello';
+import CardList from './components/CardList';
 import 'tachyons';
-
+import { createStore } from 'redux';
+import  {searchReducer } from './reducers/reducers';
+import { Provider } from 'react-redux';
 
 var nowDay = "good day";
   // <Hello great={nowDay} />,  
@@ -26,11 +28,20 @@ let robots = [
 // },3000);
 {/*<CardList robots={robots} />*/}
 
+const store = createStore(searchReducer);
+
+
 ReactDOM.render(
-   <App/>
-   , document.getElementById('root')
+  <Provider store={store}>
+    <App store={store}/>
+  </Provider>
+    , document.getElementById('root')
+   
 );
 
+
+/*<App store={store}/>
+   , document.getElementById('root')*/
 
 // ReactDOM.render(
 //   <Card id='1' name='Henrique Cabral' email='henrique.cabral@appcentrica.com' />,
