@@ -9,7 +9,7 @@ import {setSearchTerm} from '../actions/actions'
 
 const mapStateToProps = state => {
   return {
-    searchTerm : state.searchTerm
+    searchTerm : state.search.searchTerm
   }
 } 
 
