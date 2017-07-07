@@ -11,8 +11,11 @@ import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import ReduxThunk from 'redux-thunk';
 
-//stoped on the 1:24:00
+//Part 2
 //https://vimeo.com/212771057
+
+//Part 3
+//https://vimeo.com/217539098
 
 //STORE ==> APP ==> DUMP COMPONENTS ==> ACTION ==> MIDDLEWARE ==> REDUCER ===> STORE
 
