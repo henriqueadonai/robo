@@ -14,6 +14,8 @@ import ReduxThunk from 'redux-thunk';
 //stoped on the 1:24:00
 //https://vimeo.com/212771057
 
+//STORE ==> APP ==> DUMP COMPONENTS ==> ACTION ==> MIDDLEWARE ==> REDUCER ===> STORE
+
 const logger = createLogger();
 
 const rootReducer = combineReducers({
